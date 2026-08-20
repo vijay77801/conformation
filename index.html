@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rakhi Celebration</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    font-family:'Manrope',sans-serif;
+    background:#fff4eb;
+}
+
+
+/* =====================================================
+   FULL MOBILE SCREEN
+===================================================== */
+
+.rakhi-section{
+    width:100%;
+
+    min-height:100vh;
+    min-height:100svh;
+
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+
+    background:
+        linear-gradient(
+            160deg,
+            #fffaf6 0%,
+            #fff1e5 48%,
+            #fff8f3 100%
+        );
+}
+
+
+/* =====================================================
+   TOP IMAGE AREA
+===================================================== */
+
+.rakhi-top{
+    width:100%;
+
+    height:44vh;
+    min-height:310px;
+    max-height:410px;
+
+    position:relative;
+    flex-shrink:0;
+}
+
+
+/* =====================================================
+   TOP HANGING DECORATIONS
+===================================================== */
+
+.rakhi-hanging{
+    position:absolute;
+
+    top:0;
+
+    width:82px;
+    height:95px;
+
+    z-index:2;
+    pointer-events:none;
+}
+
+.rakhi-hanging.left{
+    left:0;
+}
+
+.rakhi-hanging.right{
+    right:0;
+    transform:scaleX(-1);
+}
+
+
+/* THREADS */
+
+.hanging-thread{
+    position:absolute;
+
+    top:0;
+
+    width:1px;
+
+    background:rgba(75,60,50,.18);
+}
+
+.thread-one{
+    left:10px;
+    height:34px;
+}
+
+.thread-two{
+    left:39px;
+    height:57px;
+}
+
+.thread-three{
+    left:70px;
+    height:27px;
+}
+
+
+/* BULBS */
+
+.hanging-thread::after{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    bottom:-9px;
+
+    width:15px;
+    height:15px;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+    border:1px solid rgba(80,60,50,.18);
+
+    background:rgba(255,255,255,.82);
+
+    border-radius:4px;
+}
+
+
+/* SMALL DROP */
+
+.hanging-thread::before{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    bottom:-20px;
+
+    width:4px;
+    height:4px;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:rgba(80,60,50,.22);
+}
+
+
+/* =====================================================
+   CENTER ANIMATED IMAGE
+===================================================== */
+
+.rakhi-images{
+    position:absolute;
+
+    left:50%;
+    bottom:55px;
+
+    transform:translateX(-50%);
+
+    width:min(77vw,330px);
+    height:72%;
+
+    z-index:5;
+}
+
+
+/* BOTH IMAGES SAME POSITION */
+
+.rakhi-images img{
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+    object-position:center bottom;
+
+    transition:none !important;
+    animation:none !important;
+}
+
+.rakhi-image-two{
+    display:none;
+}
+
+
+/* =====================================================
+   UPWARD CURVED LINE
+===================================================== */
+
+.rakhi-curve{
+    position:absolute;
+
+    left:-8%;
+    bottom:-39px;
+
+    width:116%;
+    height:120px;
+
+    border-bottom:
+        1.5px solid
+        rgba(95,70,55,.18);
+
+    border-radius:
+        0 0 50% 50%;
+
+    z-index:3;
+
+    pointer-events:none;
+}
+
+
+/* SECOND SOFT CURVE */
+
+.rakhi-curve::after{
+    content:"";
+
+    position:absolute;
+
+    left:8%;
+    bottom:8px;
+
+    width:84%;
+    height:95px;
+
+    border-bottom:
+        1px solid
+        rgba(95,70,55,.055);
+
+    border-radius:
+        0 0 50% 50%;
+}
+
+
+/* =====================================================
+   CONTENT BELOW CURVE
+
+   MOVED FURTHER DOWN
+===================================================== */
+
+.rakhi-content{
+    width:100%;
+
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    /*
+       MORE TOP SPACE HERE
+       Raksha Bandhan matter moves down
+    */
+    padding:
+        52px
+        18px
+        0;
+}
+
+
+/* =====================================================
+   RAKHI MATTER
+===================================================== */
+
+.rakhi-message{
+    width:100%;
+
+    text-align:center;
+
+    padding:
+        5px
+        15px
+        22px;
+}
+
+
+/* RAKSHA BANDHAN */
+
+.rakhi-message-small{
+    font-size:8px;
+
+    font-weight:600;
+
+    letter-spacing:2.2px;
+
+    color:#9b8e86;
+
+    margin-bottom:8px;
+}
+
+
+/* CELEBRATE THE BOND */
+
+.rakhi-message h1{
+    font-family:'DM Serif Display',serif;
+
+    font-size:clamp(
+        24px,
+        6.4vw,
+        30px
+    );
+
+    line-height:1.05;
+
+    font-weight:400;
+
+    letter-spacing:-.3px;
+
+    color:#292522;
+}
+
+
+/* SMALL MATTER */
+
+.rakhi-message p{
+    margin:
+        10px
+        auto
+        0;
+
+    max-width:245px;
+
+    font-size:9px;
+
+    line-height:1.6;
+
+    color:#847a75;
+}
+
+
+/* =====================================================
+   BRO + SIS CARDS
+===================================================== */
+
+.rakhi-person-cards{
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:14px;
+
+    position:relative;
+
+    z-index:5;
+}
+
+
+/* =====================================================
+   VERTICAL CARD
+===================================================== */
+
+.rakhi-person-card{
+    height:155px;
+
+    position:relative;
+
+    padding:
+        19px
+        16px;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.88) 0%,
+            rgba(255,255,255,.55) 100%
+        );
+
+    border:
+        1px solid
+        rgba(95,70,55,.075);
+
+    box-shadow:
+        0 10px 30px
+        rgba(83,58,40,.045);
+}
+
+
+/* LARGE SOFT CIRCLE */
+
+.rakhi-person-card::after{
+    content:"";
+
+    position:absolute;
+
+    right:-32px;
+    bottom:-35px;
+
+    width:100px;
+    height:100px;
+
+    border-radius:50%;
+
+    background:
+        rgba(232,195,169,.11);
+}
+
+
+/* SMALL CIRCLE */
+
+.rakhi-person-card::before{
+    content:"";
+
+    position:absolute;
+
+    right:18px;
+    bottom:18px;
+
+    width:37px;
+    height:37px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(120,90,70,.075);
+}
+
+
+/* FOR YOUR */
+
+.person-small{
+    position:relative;
+
+    z-index:2;
+
+    font-size:7px;
+
+    font-weight:600;
+
+    letter-spacing:1.7px;
+
+    color:#a09994;
+
+    margin-bottom:9px;
+}
+
+
+/* BRO / SIS */
+
+.person-name{
+    position:relative;
+
+    z-index:2;
+
+    font-family:'DM Serif Display',serif;
+
+    font-size:31px;
+
+    line-height:1;
+
+    font-weight:400;
+
+    color:#292624;
+}
+
+
+/* CARD DESCRIPTION */
+
+.person-text{
+    position:relative;
+
+    z-index:2;
+
+    margin-top:12px;
+
+    max-width:115px;
+
+    font-size:8.5px;
+
+    line-height:1.55;
+
+    color:#8a837e;
+}
+
+
+/* =====================================================
+   BOTTOM DECORATION
+===================================================== */
+
+.celebration-bottom{
+    width:100%;
+
+    flex:1;
+
+    min-height:100px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    margin-top:6px;
+}
+
+
+/* =====================================================
+   BALLOONS
+===================================================== */
+
+.balloon-group{
+    position:absolute;
+
+    bottom:-40px;
+
+    width:105px;
+    height:135px;
+}
+
+.balloon-left{
+    left:-27px;
+}
+
+.balloon-right{
+    right:-27px;
+
+    transform:scaleX(-1);
+}
+
+
+.balloon{
+    position:absolute;
+
+    border-radius:
+        52% 52%
+        48% 48%;
+
+    border:
+        1px solid
+        rgba(90,65,50,.07);
+}
+
+
+/* BALLOON STRING */
+
+.balloon::after{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:100%;
+
+    width:1px;
+    height:60px;
+
+    background:
+        rgba(90,70,60,.12);
+}
+
+
+/* KNOT */
+
+.balloon::before{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    bottom:-4px;
+
+    width:6px;
+    height:6px;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+    background:inherit;
+}
+
+
+/* LEFT BALLOONS */
+
+.balloon-one{
+    width:41px;
+    height:52px;
+
+    left:4px;
+    top:35px;
+
+    background:
+        rgba(238,181,154,.34);
+
+    transform:rotate(-8deg);
+}
+
+.balloon-two{
+    width:37px;
+    height:47px;
+
+    left:43px;
+    top:4px;
+
+    background:
+        rgba(246,207,145,.40);
+
+    transform:rotate(5deg);
+}
+
+.balloon-three{
+    width:30px;
+    height:39px;
+
+    left:75px;
+    top:48px;
+
+    background:
+        rgba(218,181,172,.30);
+
+    transform:rotate(8deg);
+}
+
+
+/* RIGHT BALLOONS */
+
+.balloon-four{
+    width:41px;
+    height:52px;
+
+    left:4px;
+    top:35px;
+
+    background:
+        rgba(235,184,161,.34);
+
+    transform:rotate(-8deg);
+}
+
+.balloon-five{
+    width:37px;
+    height:47px;
+
+    left:43px;
+    top:4px;
+
+    background:
+        rgba(245,210,153,.40);
+
+    transform:rotate(5deg);
+}
+
+.balloon-six{
+    width:30px;
+    height:39px;
+
+    left:75px;
+    top:48px;
+
+    background:
+        rgba(216,184,175,.30);
+
+    transform:rotate(8deg);
+}
+
+
+/* =====================================================
+   CENTER BOTTOM BULBS
+===================================================== */
+
+.bottom-lights{
+    position:absolute;
+
+    left:50%;
+    top:17px;
+
+    transform:translateX(-50%);
+
+    width:46%;
+    height:55px;
+
+    border-top:
+        1px solid
+        rgba(90,70,55,.11);
+
+    border-radius:50%;
+}
+
+
+.light-string{
+    position:absolute;
+
+    top:-1px;
+
+    width:1px;
+
+    background:
+        rgba(90,70,55,.13);
+}
+
+
+.light-string::after{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    bottom:-5px;
+
+    transform:translateX(-50%);
+
+    width:8px;
+    height:9px;
+
+    border-radius:50%;
+
+    background:
+        rgba(245,202,125,.60);
+
+    box-shadow:
+        0 0 10px
+        rgba(245,202,125,.18);
+}
+
+
+.light-1{
+    left:5%;
+    height:12px;
+}
+
+.light-2{
+    left:28%;
+    height:23px;
+}
+
+.light-3{
+    left:50%;
+    height:31px;
+}
+
+.light-4{
+    left:72%;
+    height:23px;
+}
+
+.light-5{
+    left:95%;
+    height:12px;
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:360px){
+
+    .rakhi-top{
+        height:42vh;
+        min-height:285px;
+    }
+
+
+    .rakhi-hanging{
+        width:68px;
+        height:80px;
+    }
+
+
+    .thread-one{
+        left:8px;
+        height:29px;
+    }
+
+
+    .thread-two{
+        left:32px;
+        height:47px;
+    }
+
+
+    .thread-three{
+        left:58px;
+        height:23px;
+    }
+
+
+    .hanging-thread::after{
+        width:13px;
+        height:13px;
+    }
+
+
+    /* IMAGE */
+
+    .rakhi-images{
+        bottom:52px;
+
+        width:75vw;
+        height:70%;
+    }
+
+
+    /* CURVE */
+
+    .rakhi-curve{
+        bottom:-36px;
+
+        height:112px;
+    }
+
+
+    /* MATTER MOVED DOWN */
+
+    .rakhi-content{
+        padding:
+            45px
+            13px
+            0;
+    }
+
+
+    .rakhi-message{
+        padding:
+            5px
+            10px
+            18px;
+    }
+
+
+    .rakhi-message h1{
+        font-size:22px;
+    }
+
+
+    .rakhi-message p{
+        font-size:8px;
+    }
+
+
+    /* CARDS */
+
+    .rakhi-person-cards{
+        gap:10px;
+    }
+
+
+    .rakhi-person-card{
+        height:140px;
+
+        padding:
+            16px
+            13px;
+
+        border-radius:19px;
+    }
+
+
+    .person-name{
+        font-size:28px;
+    }
+
+
+    .person-text{
+        margin-top:9px;
+
+        font-size:8px;
+    }
+
+
+    .celebration-bottom{
+        min-height:85px;
+    }
+
+}
+
+
+/* =====================================================
+   SHORT MOBILE
+===================================================== */
+
+@media(max-height:700px){
+
+    .rakhi-top{
+        height:40vh;
+        min-height:270px;
+    }
+
+
+    .rakhi-content{
+        padding-top:42px;
+    }
+
+
+    .rakhi-message{
+        padding-bottom:16px;
+    }
+
+
+    .rakhi-person-card{
+        height:132px;
+    }
+
+
+    .celebration-bottom{
+        min-height:70px;
+    }
+
+}
+
+
+/* =====================================================
+   LARGE MOBILE / DESKTOP PREVIEW
+===================================================== */
+
+@media(min-width:480px){
+
+    .rakhi-section{
+        max-width:480px;
+
+        margin:auto;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<section class="rakhi-section">
+
+
+    <!-- TOP AREA -->
+
+    <div class="rakhi-top">
+
+
+        <!-- LEFT HANGINGS -->
+
+        <div class="rakhi-hanging left">
+
+            <span class="hanging-thread thread-one"></span>
+            <span class="hanging-thread thread-two"></span>
+            <span class="hanging-thread thread-three"></span>
+
+        </div>
+
+
+        <!-- RIGHT HANGINGS -->
+
+        <div class="rakhi-hanging right">
+
+            <span class="hanging-thread thread-one"></span>
+            <span class="hanging-thread thread-two"></span>
+            <span class="hanging-thread thread-three"></span>
+
+        </div>
+
+
+        <!-- CENTER ANIMATED IMAGE -->
+
+        <div class="rakhi-images">
+
+            <img
+                class="rakhi-image-one"
+                src="image1.png"
+                alt="Rakhi"
+            >
+
+            <img
+                class="rakhi-image-two"
+                src="image2.png"
+                alt="Rakhi Celebration"
+            >
+
+        </div>
+
+
+        <!-- UPWARD CURVE -->
+
+        <div class="rakhi-curve"></div>
+
+
+    </div>
+
+
+
+    <!-- CONTENT -->
+
+    <div class="rakhi-content">
+
+
+        <!-- RAKHI MATTER -->
+
+        <div class="rakhi-message">
+
+            <div class="rakhi-message-small">
+                RAKSHA BANDHAN
+            </div>
+
+            <h1>
+                Celebrate the bond.
+            </h1>
+
+            <p>
+                Little fights, endless laughs
+                and a lifetime of memories.
+            </p>
+
+        </div>
+
+
+
+        <!-- BRO + SIS CARDS -->
+
+        <div class="rakhi-person-cards">
+
+
+            <!-- BRO -->
+
+            <div class="rakhi-person-card">
+
+                <div class="person-small">
+                    FOR YOUR
+                </div>
+
+                <div class="person-name">
+                    Bro
+                </div>
+
+                <div class="person-text">
+                    Fights, laughs & memories
+                    that stay forever.
+                </div>
+
+            </div>
+
+
+            <!-- SIS -->
+
+            <div class="rakhi-person-card">
+
+                <div class="person-small">
+                    FOR YOUR
+                </div>
+
+                <div class="person-name">
+                    Sis
+                </div>
+
+                <div class="person-text">
+                    A beautiful bond that
+                    always feels like home.
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- BOTTOM DECORATIONS -->
+
+        <div class="celebration-bottom">
+
+
+            <!-- LEFT BALLOONS -->
+
+            <div class="balloon-group balloon-left">
+
+                <span class="balloon balloon-one"></span>
+                <span class="balloon balloon-two"></span>
+                <span class="balloon balloon-three"></span>
+
+            </div>
+
+
+            <!-- CENTER BULBS -->
+
+            <div class="bottom-lights">
+
+                <span class="light-string light-1"></span>
+                <span class="light-string light-2"></span>
+                <span class="light-string light-3"></span>
+                <span class="light-string light-4"></span>
+                <span class="light-string light-5"></span>
+
+            </div>
+
+
+            <!-- RIGHT BALLOONS -->
+
+            <div class="balloon-group balloon-right">
+
+                <span class="balloon balloon-four"></span>
+                <span class="balloon balloon-five"></span>
+                <span class="balloon balloon-six"></span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<script>
+
+const image1 =
+document.querySelector(".rakhi-image-one");
+
+const image2 =
+document.querySelector(".rakhi-image-two");
+
+let first = true;
+
+
+/* NO TRANSITION — DIRECT IMAGE CHANGE */
+
+setInterval(() => {
+
+    if(first){
+
+        image1.style.display = "none";
+        image2.style.display = "block";
+
+    }else{
+
+        image1.style.display = "block";
+        image2.style.display = "none";
+
+    }
+
+    first = !first;
+
+},1100);
+
+</script>
+
+
+</body>
+</html>
