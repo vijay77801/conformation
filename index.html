@@ -8,7 +8,6 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -98,7 +97,6 @@ button{
         cubic-bezier(.22,.8,.25,1);
 }
 
-
 .rakhi-app.page-open .rakhi-home{
     transform:translateX(-25%);
 }
@@ -139,17 +137,14 @@ button{
     pointer-events:none;
 }
 
-
 .rakhi-hanging.left{
     left:0;
 }
-
 
 .rakhi-hanging.right{
     right:0;
     transform:scaleX(-1);
 }
-
 
 .hanging-thread{
     position:absolute;
@@ -161,24 +156,20 @@ button{
     background:rgba(75,60,50,.18);
 }
 
-
 .thread-one{
     left:10px;
     height:34px;
 }
-
 
 .thread-two{
     left:39px;
     height:57px;
 }
 
-
 .thread-three{
     left:70px;
     height:27px;
 }
-
 
 .hanging-thread::after{
     content:"";
@@ -201,7 +192,6 @@ button{
 
     border-radius:4px;
 }
-
 
 .hanging-thread::before{
     content:"";
@@ -241,7 +231,6 @@ button{
     z-index:5;
 }
 
-
 .rakhi-images img,
 .code-rakhi-images img{
     position:absolute;
@@ -258,7 +247,6 @@ button{
     transition:none !important;
     animation:none !important;
 }
-
 
 .rakhi-image-two,
 .code-rakhi-image-two{
@@ -291,7 +279,6 @@ button{
 
     pointer-events:none;
 }
-
 
 .rakhi-curve::after,
 .code-rakhi-curve::after{
@@ -348,7 +335,6 @@ button{
         22px;
 }
 
-
 .rakhi-message-small{
     font-size:8px;
 
@@ -361,15 +347,11 @@ button{
     margin-bottom:8px;
 }
 
-
 .rakhi-message h1{
     font-family:'DM Serif Display',serif;
 
-    font-size:clamp(
-        24px,
-        6.4vw,
-        30px
-    );
+    font-size:
+        clamp(24px,6.4vw,30px);
 
     line-height:1.05;
 
@@ -377,7 +359,6 @@ button{
 
     color:#292522;
 }
-
 
 .rakhi-message p{
     margin:10px auto 0;
@@ -410,7 +391,6 @@ button{
 
     z-index:5;
 }
-
 
 .rakhi-person-card{
     width:100%;
@@ -446,13 +426,13 @@ button{
     cursor:pointer;
 
     color:inherit;
-}
 
+    -webkit-tap-highlight-color:transparent;
+}
 
 .rakhi-person-card:active{
     transform:scale(.98);
 }
-
 
 .rakhi-person-card::after{
     content:"";
@@ -469,7 +449,6 @@ button{
 
     background:rgba(232,195,169,.11);
 }
-
 
 .rakhi-person-card::before{
     content:"";
@@ -489,7 +468,6 @@ button{
         rgba(120,90,70,.075);
 }
 
-
 .person-small{
     position:relative;
 
@@ -506,7 +484,6 @@ button{
     margin-bottom:9px;
 }
 
-
 .person-name{
     position:relative;
 
@@ -522,7 +499,6 @@ button{
 
     color:#292624;
 }
-
 
 .person-text{
     position:relative;
@@ -542,7 +518,7 @@ button{
 
 
 /* =====================================================
-   HOME BOTTOM DESIGN
+   HOME BOTTOM DECORATION
 ===================================================== */
 
 .celebration-bottom{
@@ -584,7 +560,6 @@ button{
     z-index:3;
 }
 
-
 .light-string{
     position:absolute;
 
@@ -595,7 +570,6 @@ button{
     background:
         rgba(95,75,60,.15);
 }
-
 
 .light-string::after{
     content:"";
@@ -625,30 +599,25 @@ button{
         rgba(244,199,124,.20);
 }
 
-
 .light-1{
     left:4%;
     height:10px;
 }
-
 
 .light-2{
     left:27%;
     height:22px;
 }
 
-
 .light-3{
     left:50%;
     height:31px;
 }
 
-
 .light-4{
     left:73%;
     height:22px;
 }
-
 
 .light-5{
     left:96%;
@@ -657,7 +626,7 @@ button{
 
 
 /* =====================================================
-   SMALL DECORATION DOTS
+   SMALL DECORATIVE DOTS
 ===================================================== */
 
 .bottom-dot{
@@ -671,7 +640,6 @@ button{
     z-index:2;
 }
 
-
 .dot-one{
     width:5px;
     height:5px;
@@ -679,7 +647,6 @@ button{
     left:31%;
     top:75px;
 }
-
 
 .dot-two{
     width:3px;
@@ -692,7 +659,6 @@ button{
         rgba(218,181,120,.28);
 }
 
-
 .dot-three{
     width:4px;
     height:4px;
@@ -700,7 +666,6 @@ button{
     right:36%;
     top:87px;
 }
-
 
 .dot-four{
     width:3px;
@@ -729,18 +694,15 @@ button{
     z-index:1;
 }
 
-
 .balloon-left{
     left:-28px;
 }
-
 
 .balloon-right{
     right:-28px;
 
     transform:scaleX(-1);
 }
-
 
 .balloon{
     position:absolute;
@@ -753,7 +715,6 @@ button{
         1px solid
         rgba(90,65,50,.07);
 }
-
 
 .balloon::after{
     content:"";
@@ -769,7 +730,6 @@ button{
     background:
         rgba(90,70,60,.11);
 }
-
 
 .balloon::before{
     content:"";
@@ -789,7 +749,6 @@ button{
     background:inherit;
 }
 
-
 .balloon-one,
 .balloon-four{
     width:43px;
@@ -804,7 +763,6 @@ button{
     transform:rotate(-8deg);
 }
 
-
 .balloon-two,
 .balloon-five{
     width:38px;
@@ -818,7 +776,6 @@ button{
 
     transform:rotate(5deg);
 }
-
 
 .balloon-three,
 .balloon-six{
@@ -864,14 +821,13 @@ button{
         rgba(74,48,32,.08);
 }
 
-
 .rakhi-app.page-open .rakhi-code-page{
     transform:translateX(0);
 }
 
 
 /* =====================================================
-   BACK BUTTON
+   SECOND PAGE BACK BUTTON
 ===================================================== */
 
 .code-back{
@@ -915,6 +871,8 @@ button{
     font-size:25px;
 
     cursor:pointer;
+
+    -webkit-tap-highlight-color:transparent;
 }
 
 
@@ -940,7 +898,6 @@ button{
     text-align:center;
 }
 
-
 .code-small-heading{
     font-size:8px;
 
@@ -952,7 +909,6 @@ button{
 
     margin-bottom:9px;
 }
-
 
 .code-title{
     font-family:'DM Serif Display',serif;
@@ -969,7 +925,6 @@ button{
     max-width:300px;
 }
 
-
 .code-description{
     margin-top:11px;
 
@@ -984,7 +939,7 @@ button{
 
 
 /* =====================================================
-   GENERATED CODE
+   GENERATED CODE CARD
 ===================================================== */
 
 .generated-code-box{
@@ -1016,7 +971,6 @@ button{
         rgba(83,58,40,.04);
 }
 
-
 .generated-code-label{
     font-size:7px;
 
@@ -1028,7 +982,6 @@ button{
 
     margin-bottom:9px;
 }
-
 
 .generated-code{
     font-size:
@@ -1068,13 +1021,13 @@ button{
     font-weight:600;
 
     cursor:pointer;
-}
 
+    -webkit-tap-highlight-color:transparent;
+}
 
 .copy-code-btn:active{
     transform:scale(.985);
 }
-
 
 .copy-status{
     height:20px;
@@ -1088,7 +1041,7 @@ button{
 
 
 /* =====================================================
-   SECOND PAGE BOTTOM DESIGN
+   SECOND PAGE BOTTOM
 ===================================================== */
 
 .code-page-bottom{
@@ -1102,7 +1055,6 @@ button{
 
     overflow:hidden;
 }
-
 
 .code-page-bottom::before{
     content:"";
@@ -1132,40 +1084,33 @@ button{
     .rakhi-top,
     .code-rakhi-top{
         height:42vh;
-
         min-height:285px;
     }
-
 
     .rakhi-hanging{
         width:68px;
         height:80px;
     }
 
-
     .thread-one{
         left:8px;
         height:29px;
     }
-
 
     .thread-two{
         left:32px;
         height:47px;
     }
 
-
     .thread-three{
         left:58px;
         height:23px;
     }
 
-
     .hanging-thread::after{
         width:13px;
         height:13px;
     }
-
 
     .rakhi-images,
     .code-rakhi-images{
@@ -1175,14 +1120,12 @@ button{
         height:70%;
     }
 
-
     .rakhi-curve,
     .code-rakhi-curve{
         bottom:-36px;
 
         height:112px;
     }
-
 
     .rakhi-content{
         padding:
@@ -1191,7 +1134,6 @@ button{
             0;
     }
 
-
     .code-content{
         padding:
             45px
@@ -1199,21 +1141,17 @@ button{
             20px;
     }
 
-
     .rakhi-message{
         padding-bottom:18px;
     }
-
 
     .rakhi-message h1{
         font-size:22px;
     }
 
-
     .rakhi-person-cards{
         gap:10px;
     }
-
 
     .rakhi-person-card{
         height:140px;
@@ -1225,11 +1163,9 @@ button{
         border-radius:19px;
     }
 
-
     .person-name{
         font-size:28px;
     }
-
 
     .celebration-bottom{
         min-height:110px;
@@ -1237,20 +1173,17 @@ button{
         margin-top:6px;
     }
 
-
     .bottom-lights{
         width:44%;
 
         top:20px;
     }
 
-
     .balloon-left{
         left:-35px;
 
         transform:scale(.90);
     }
-
 
     .balloon-right{
         right:-35px;
@@ -1260,11 +1193,9 @@ button{
             scale(.90);
     }
 
-
     .code-title{
         font-size:24px;
     }
-
 
     .generated-code-box{
         margin-top:20px;
@@ -1273,7 +1204,6 @@ button{
             18px
             14px;
     }
-
 }
 
 
@@ -1290,31 +1220,25 @@ button{
         min-height:270px;
     }
 
-
     .rakhi-content{
         padding-top:42px;
     }
-
 
     .code-content{
         padding-top:42px;
     }
 
-
     .rakhi-person-card{
         height:132px;
     }
-
 
     .celebration-bottom{
         min-height:90px;
     }
 
-
     .generated-code-box{
         margin-top:18px;
     }
-
 }
 
 
@@ -1329,12 +1253,10 @@ button{
 
         margin:auto;
     }
-
 }
 
 </style>
 </head>
-
 
 <body>
 
@@ -1348,8 +1270,6 @@ button{
 
 <section class="rakhi-screen rakhi-home">
 
-
-    <!-- TOP AREA -->
 
     <div class="rakhi-top">
 
@@ -1365,7 +1285,6 @@ button{
         </div>
 
 
-
         <!-- RIGHT HANGINGS -->
 
         <div class="rakhi-hanging right">
@@ -1377,8 +1296,7 @@ button{
         </div>
 
 
-
-        <!-- HOME ANIMATED IMAGES -->
+        <!-- HOME IMAGES -->
 
         <div class="rakhi-images">
 
@@ -1397,8 +1315,7 @@ button{
         </div>
 
 
-
-        <!-- CURVED LINE -->
+        <!-- CURVE -->
 
         <div class="rakhi-curve"></div>
 
@@ -1412,37 +1329,29 @@ button{
     <div class="rakhi-content">
 
 
-        <!-- MATTER -->
-
         <div class="rakhi-message">
-
 
             <div class="rakhi-message-small">
                 RAKSHA BANDHAN
             </div>
 
-
             <h1>
                 Celebrate the bond.
             </h1>
-
 
             <p>
                 Little fights, endless laughs
                 and a lifetime of memories.
             </p>
 
-
         </div>
 
 
 
-        <!-- BRO + SIS CARDS -->
+        <!-- BRO + SIS -->
 
         <div class="rakhi-person-cards">
 
-
-            <!-- BRO -->
 
             <button
                 type="button"
@@ -1453,11 +1362,9 @@ button{
                     FOR YOUR
                 </div>
 
-
                 <div class="person-name">
                     Bro
                 </div>
-
 
                 <div class="person-text">
                     Create something special
@@ -1468,8 +1375,6 @@ button{
 
 
 
-            <!-- SIS -->
-
             <button
                 type="button"
                 class="rakhi-person-card sis-card"
@@ -1479,11 +1384,9 @@ button{
                     FOR YOUR
                 </div>
 
-
                 <div class="person-name">
                     Sis
                 </div>
-
 
                 <div class="person-text">
                     Create something special
@@ -1498,7 +1401,7 @@ button{
 
 
         <!-- =================================================
-             RESTORED BOTTOM DESIGN
+             BOTTOM DESIGN
         ================================================== -->
 
         <div class="celebration-bottom">
@@ -1516,7 +1419,7 @@ button{
 
 
 
-            <!-- CENTER CURVED LIGHTS -->
+            <!-- CENTER LIGHTS -->
 
             <div class="bottom-lights">
 
@@ -1530,7 +1433,7 @@ button{
 
 
 
-            <!-- SMALL DECORATIONS -->
+            <!-- SMALL DOTS -->
 
             <span class="bottom-dot dot-one"></span>
             <span class="bottom-dot dot-two"></span>
@@ -1561,7 +1464,8 @@ button{
 
 
 <!-- =====================================================
-     PAGE 2 - SLIDES RIGHT TO LEFT
+     PAGE 2
+     SLIDES RIGHT -> LEFT
 ===================================================== -->
 
 <section class="rakhi-screen rakhi-code-page">
@@ -1580,7 +1484,7 @@ button{
 
 
 
-    <!-- SAME TOP DESIGN -->
+    <!-- SAME TOP -->
 
     <div class="code-rakhi-top">
 
@@ -1638,7 +1542,9 @@ button{
 
 
 
-    <!-- SECOND PAGE CONTENT -->
+    <!-- =================================================
+         SECOND PAGE MATTER
+    ================================================== -->
 
     <div class="code-content">
 
@@ -1822,15 +1728,52 @@ document.getElementById("copyStatus");
 
 
 /* =====================================================
-   RANDOM CODE GENERATOR
+   ONE DEVICE = ONE CODE
+
+   IMPORTANT:
+
+   First visit on Device A:
+   RAKHI-ABC123
+
+   Every repeat on Device A:
+   RAKHI-ABC123
+
+   Device B:
+   RAKHI-7KP9MX
+
+   Every repeat on Device B:
+   RAKHI-7KP9MX
 ===================================================== */
 
-function generateRakhiCode(){
+function getDeviceRakhiCode(){
+
+
+    /* CHECK SAVED CODE */
+
+    const savedCode =
+    localStorage.getItem(
+        "cezooRakhiDeviceCode"
+    );
+
+
+    /* ALREADY EXISTS */
+
+    if(savedCode){
+
+        return savedCode;
+
+    }
+
+
+
+    /* =================================================
+       FIRST TIME ON THIS DEVICE/BROWSER
+    ================================================= */
 
     const characters =
     "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 
-    let code = "";
+    let randomPart = "";
 
 
     for(let i = 0; i < 6; i++){
@@ -1841,15 +1784,45 @@ function generateRakhiCode(){
             characters.length
         );
 
-        code +=
+        randomPart +=
         characters[randomIndex];
 
     }
 
 
-    return "RAKHI-" + code;
+
+    /* CREATE CODE */
+
+    const newCode =
+    "RAKHI-" + randomPart;
+
+
+
+    /* =================================================
+       SAVE IT
+
+       THIS IS THE IMPORTANT PART
+    ================================================= */
+
+    localStorage.setItem(
+        "cezooRakhiDeviceCode",
+        newCode
+    );
+
+
+
+    return newCode;
 
 }
+
+
+
+/* =====================================================
+   GET DEVICE CODE ONCE
+===================================================== */
+
+const deviceRakhiCode =
+getDeviceRakhiCode();
 
 
 
@@ -1859,19 +1832,32 @@ function generateRakhiCode(){
 
 function openCodePage(type){
 
+
+    /* =================================================
+       ALWAYS USE SAME DEVICE CODE
+
+       NO NEW RANDOM CODE HERE
+    ================================================= */
+
     generatedCode.textContent =
-    generateRakhiCode();
+    deviceRakhiCode;
 
 
     copyStatus.textContent = "";
 
 
-    /* BRO CLICK */
+
+    /* =================================================
+       BRO CARD
+
+       USER SHARES CODE WITH SISTER
+    ================================================= */
 
     if(type === "bro"){
 
         codeTitle.textContent =
         "A little surprise for your sister.";
+
 
         codeDescription.textContent =
         "Share this code with your sister and celebrate the bond you both share.";
@@ -1879,18 +1865,27 @@ function openCodePage(type){
     }
 
 
-    /* SIS CLICK */
+
+    /* =================================================
+       SIS CARD
+
+       USER SHARES CODE WITH BROTHER
+    ================================================= */
 
     if(type === "sis"){
 
         codeTitle.textContent =
         "A little surprise for your brother.";
 
+
         codeDescription.textContent =
         "Share this code with your brother and celebrate the bond you both share.";
 
     }
 
+
+
+    /* SLIDE SECOND PAGE */
 
     rakhiApp.classList.add(
         "page-open"
@@ -1901,7 +1896,7 @@ function openCodePage(type){
 
 
 /* =====================================================
-   BRO CARD
+   BRO CLICK
 ===================================================== */
 
 broCard.addEventListener(
@@ -1916,7 +1911,7 @@ broCard.addEventListener(
 
 
 /* =====================================================
-   SIS CARD
+   SIS CLICK
 ===================================================== */
 
 sisCard.addEventListener(
@@ -1971,7 +1966,9 @@ copyCodeBtn.addEventListener(
 
         }
 
+
         catch(error){
+
 
             const temp =
             document.createElement(
@@ -1981,11 +1978,19 @@ copyCodeBtn.addEventListener(
 
             temp.value = code;
 
+            temp.style.position =
+            "fixed";
+
+            temp.style.opacity =
+            "0";
+
 
             document.body.appendChild(
                 temp
             );
 
+
+            temp.focus();
 
             temp.select();
 
@@ -2009,7 +2014,7 @@ copyCodeBtn.addEventListener(
 
 
 /* =====================================================
-   ESCAPE BACK
+   ESCAPE KEY BACK
 ===================================================== */
 
 document.addEventListener(
