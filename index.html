@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -22,7 +22,8 @@
 html,
 body{
     width:100%;
-    min-height:100%;
+    height:100%;
+    overflow:hidden;
 }
 
 body{
@@ -30,22 +31,22 @@ body{
     background:#fff4eb;
 }
 
+button{
+    font:inherit;
+}
+
 
 /* =====================================================
-   FULL MOBILE SCREEN
+   MAIN APP
 ===================================================== */
 
-.rakhi-section{
+.rakhi-app{
     width:100%;
-
-    min-height:100vh;
-    min-height:100svh;
+    height:100vh;
+    height:100svh;
 
     position:relative;
     overflow:hidden;
-
-    display:flex;
-    flex-direction:column;
 
     background:
         linear-gradient(
@@ -58,10 +59,57 @@ body{
 
 
 /* =====================================================
-   TOP IMAGE AREA
+   COMMON SCREEN
 ===================================================== */
 
-.rakhi-top{
+.rakhi-screen{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            160deg,
+            #fffaf6 0%,
+            #fff1e5 48%,
+            #fff8f3 100%
+        );
+}
+
+
+/* =====================================================
+   HOME SCREEN
+===================================================== */
+
+.rakhi-home{
+    z-index:1;
+
+    display:flex;
+    flex-direction:column;
+
+    transform:translateX(0);
+
+    transition:
+        transform .42s
+        cubic-bezier(.22,.8,.25,1);
+}
+
+
+.rakhi-app.page-open .rakhi-home{
+    transform:translateX(-25%);
+}
+
+
+/* =====================================================
+   TOP AREA
+===================================================== */
+
+.rakhi-top,
+.code-rakhi-top{
     width:100%;
 
     height:44vh;
@@ -69,12 +117,13 @@ body{
     max-height:410px;
 
     position:relative;
+
     flex-shrink:0;
 }
 
 
 /* =====================================================
-   TOP HANGING DECORATIONS
+   TOP HANGINGS
 ===================================================== */
 
 .rakhi-hanging{
@@ -85,21 +134,22 @@ body{
     width:82px;
     height:95px;
 
-    z-index:2;
+    z-index:4;
+
     pointer-events:none;
 }
+
 
 .rakhi-hanging.left{
     left:0;
 }
+
 
 .rakhi-hanging.right{
     right:0;
     transform:scaleX(-1);
 }
 
-
-/* THREADS */
 
 .hanging-thread{
     position:absolute;
@@ -111,23 +161,24 @@ body{
     background:rgba(75,60,50,.18);
 }
 
+
 .thread-one{
     left:10px;
     height:34px;
 }
+
 
 .thread-two{
     left:39px;
     height:57px;
 }
 
+
 .thread-three{
     left:70px;
     height:27px;
 }
 
-
-/* BULBS */
 
 .hanging-thread::after{
     content:"";
@@ -152,8 +203,6 @@ body{
 }
 
 
-/* SMALL DROP */
-
 .hanging-thread::before{
     content:"";
 
@@ -174,10 +223,11 @@ body{
 
 
 /* =====================================================
-   CENTER ANIMATED IMAGE
+   ANIMATED IMAGES
 ===================================================== */
 
-.rakhi-images{
+.rakhi-images,
+.code-rakhi-images{
     position:absolute;
 
     left:50%;
@@ -192,9 +242,8 @@ body{
 }
 
 
-/* BOTH IMAGES SAME POSITION */
-
-.rakhi-images img{
+.rakhi-images img,
+.code-rakhi-images img{
     position:absolute;
 
     left:0;
@@ -210,16 +259,19 @@ body{
     animation:none !important;
 }
 
-.rakhi-image-two{
+
+.rakhi-image-two,
+.code-rakhi-image-two{
     display:none;
 }
 
 
 /* =====================================================
-   UPWARD CURVED LINE
+   CURVED LINE
 ===================================================== */
 
-.rakhi-curve{
+.rakhi-curve,
+.code-rakhi-curve{
     position:absolute;
 
     left:-8%;
@@ -241,9 +293,8 @@ body{
 }
 
 
-/* SECOND SOFT CURVE */
-
-.rakhi-curve::after{
+.rakhi-curve::after,
+.code-rakhi-curve::after{
     content:"";
 
     position:absolute;
@@ -264,9 +315,7 @@ body{
 
 
 /* =====================================================
-   CONTENT BELOW CURVE
-
-   MOVED FURTHER DOWN
+   HOME CONTENT
 ===================================================== */
 
 .rakhi-content{
@@ -277,10 +326,6 @@ body{
     display:flex;
     flex-direction:column;
 
-    /*
-       MORE TOP SPACE HERE
-       Raksha Bandhan matter moves down
-    */
     padding:
         52px
         18px
@@ -289,7 +334,7 @@ body{
 
 
 /* =====================================================
-   RAKHI MATTER
+   HOME MESSAGE
 ===================================================== */
 
 .rakhi-message{
@@ -304,8 +349,6 @@ body{
 }
 
 
-/* RAKSHA BANDHAN */
-
 .rakhi-message-small{
     font-size:8px;
 
@@ -318,8 +361,6 @@ body{
     margin-bottom:8px;
 }
 
-
-/* CELEBRATE THE BOND */
 
 .rakhi-message h1{
     font-family:'DM Serif Display',serif;
@@ -334,19 +375,12 @@ body{
 
     font-weight:400;
 
-    letter-spacing:-.3px;
-
     color:#292522;
 }
 
 
-/* SMALL MATTER */
-
 .rakhi-message p{
-    margin:
-        10px
-        auto
-        0;
+    margin:10px auto 0;
 
     max-width:245px;
 
@@ -378,11 +412,8 @@ body{
 }
 
 
-/* =====================================================
-   VERTICAL CARD
-===================================================== */
-
 .rakhi-person-card{
+    width:100%;
     height:155px;
 
     position:relative;
@@ -395,24 +426,33 @@ body{
 
     border-radius:22px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.88) 0%,
-            rgba(255,255,255,.55) 100%
-        );
-
     border:
         1px solid
         rgba(95,70,55,.075);
 
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.90),
+            rgba(255,255,255,.55)
+        );
+
     box-shadow:
         0 10px 30px
         rgba(83,58,40,.045);
+
+    text-align:left;
+
+    cursor:pointer;
+
+    color:inherit;
 }
 
 
-/* LARGE SOFT CIRCLE */
+.rakhi-person-card:active{
+    transform:scale(.98);
+}
+
 
 .rakhi-person-card::after{
     content:"";
@@ -427,12 +467,9 @@ body{
 
     border-radius:50%;
 
-    background:
-        rgba(232,195,169,.11);
+    background:rgba(232,195,169,.11);
 }
 
-
-/* SMALL CIRCLE */
 
 .rakhi-person-card::before{
     content:"";
@@ -453,8 +490,6 @@ body{
 }
 
 
-/* FOR YOUR */
-
 .person-small{
     position:relative;
 
@@ -472,8 +507,6 @@ body{
 }
 
 
-/* BRO / SIS */
-
 .person-name{
     position:relative;
 
@@ -490,8 +523,6 @@ body{
     color:#292624;
 }
 
-
-/* CARD DESCRIPTION */
 
 .person-text{
     position:relative;
@@ -511,7 +542,7 @@ body{
 
 
 /* =====================================================
-   BOTTOM DECORATION
+   HOME BOTTOM DESIGN
 ===================================================== */
 
 .celebration-bottom{
@@ -519,13 +550,167 @@ body{
 
     flex:1;
 
-    min-height:100px;
+    min-height:125px;
 
     position:relative;
 
     overflow:hidden;
 
-    margin-top:6px;
+    margin-top:8px;
+}
+
+
+/* =====================================================
+   CENTER CURVED LIGHTS
+===================================================== */
+
+.bottom-lights{
+    position:absolute;
+
+    left:50%;
+    top:22px;
+
+    transform:translateX(-50%);
+
+    width:48%;
+    height:62px;
+
+    border-top:
+        1px solid
+        rgba(105,80,65,.14);
+
+    border-radius:50%;
+
+    z-index:3;
+}
+
+
+.light-string{
+    position:absolute;
+
+    top:-1px;
+
+    width:1px;
+
+    background:
+        rgba(95,75,60,.15);
+}
+
+
+.light-string::after{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    bottom:-6px;
+
+    transform:translateX(-50%);
+
+    width:8px;
+    height:10px;
+
+    border-radius:
+        50% 50% 45% 45%;
+
+    background:
+        rgba(244,199,124,.68);
+
+    border:
+        1px solid
+        rgba(170,125,75,.08);
+
+    box-shadow:
+        0 0 9px
+        rgba(244,199,124,.20);
+}
+
+
+.light-1{
+    left:4%;
+    height:10px;
+}
+
+
+.light-2{
+    left:27%;
+    height:22px;
+}
+
+
+.light-3{
+    left:50%;
+    height:31px;
+}
+
+
+.light-4{
+    left:73%;
+    height:22px;
+}
+
+
+.light-5{
+    left:96%;
+    height:10px;
+}
+
+
+/* =====================================================
+   SMALL DECORATION DOTS
+===================================================== */
+
+.bottom-dot{
+    position:absolute;
+
+    border-radius:50%;
+
+    background:
+        rgba(211,165,138,.22);
+
+    z-index:2;
+}
+
+
+.dot-one{
+    width:5px;
+    height:5px;
+
+    left:31%;
+    top:75px;
+}
+
+
+.dot-two{
+    width:3px;
+    height:3px;
+
+    left:40%;
+    top:92px;
+
+    background:
+        rgba(218,181,120,.28);
+}
+
+
+.dot-three{
+    width:4px;
+    height:4px;
+
+    right:36%;
+    top:87px;
+}
+
+
+.dot-four{
+    width:3px;
+    height:3px;
+
+    right:27%;
+    top:68px;
+
+    background:
+        rgba(218,181,120,.28);
 }
 
 
@@ -536,18 +721,22 @@ body{
 .balloon-group{
     position:absolute;
 
-    bottom:-40px;
+    bottom:-24px;
 
-    width:105px;
+    width:110px;
     height:135px;
+
+    z-index:1;
 }
+
 
 .balloon-left{
-    left:-27px;
+    left:-28px;
 }
 
+
 .balloon-right{
-    right:-27px;
+    right:-28px;
 
     transform:scaleX(-1);
 }
@@ -566,8 +755,6 @@ body{
 }
 
 
-/* BALLOON STRING */
-
 .balloon::after{
     content:"";
 
@@ -577,14 +764,12 @@ body{
     top:100%;
 
     width:1px;
-    height:60px;
+    height:62px;
 
     background:
-        rgba(90,70,60,.12);
+        rgba(90,70,60,.11);
 }
 
-
-/* KNOT */
 
 .balloon::before{
     content:"";
@@ -605,172 +790,336 @@ body{
 }
 
 
-/* LEFT BALLOONS */
-
-.balloon-one{
-    width:41px;
-    height:52px;
-
-    left:4px;
-    top:35px;
-
-    background:
-        rgba(238,181,154,.34);
-
-    transform:rotate(-8deg);
-}
-
-.balloon-two{
-    width:37px;
-    height:47px;
-
-    left:43px;
-    top:4px;
-
-    background:
-        rgba(246,207,145,.40);
-
-    transform:rotate(5deg);
-}
-
-.balloon-three{
-    width:30px;
-    height:39px;
-
-    left:75px;
-    top:48px;
-
-    background:
-        rgba(218,181,172,.30);
-
-    transform:rotate(8deg);
-}
-
-
-/* RIGHT BALLOONS */
-
+.balloon-one,
 .balloon-four{
-    width:41px;
-    height:52px;
+    width:43px;
+    height:55px;
 
-    left:4px;
-    top:35px;
+    left:3px;
+    top:31px;
 
     background:
-        rgba(235,184,161,.34);
+        rgba(238,181,154,.33);
 
     transform:rotate(-8deg);
 }
 
-.balloon-five{
-    width:37px;
-    height:47px;
 
-    left:43px;
-    top:4px;
+.balloon-two,
+.balloon-five{
+    width:38px;
+    height:49px;
+
+    left:45px;
+    top:3px;
 
     background:
-        rgba(245,210,153,.40);
+        rgba(246,207,145,.38);
 
     transform:rotate(5deg);
 }
 
-.balloon-six{
-    width:30px;
-    height:39px;
 
-    left:75px;
+.balloon-three,
+.balloon-six{
+    width:31px;
+    height:41px;
+
+    left:78px;
     top:48px;
 
     background:
-        rgba(216,184,175,.30);
+        rgba(218,181,172,.29);
 
-    transform:rotate(8deg);
+    transform:rotate(9deg);
 }
 
 
 /* =====================================================
-   CENTER BOTTOM BULBS
+   SECOND PAGE
 ===================================================== */
 
-.bottom-lights{
-    position:absolute;
+.rakhi-code-page{
+    z-index:20;
 
-    left:50%;
-    top:17px;
+    display:flex;
+    flex-direction:column;
 
-    transform:translateX(-50%);
+    transform:translateX(100%);
 
-    width:46%;
-    height:55px;
-
-    border-top:
-        1px solid
-        rgba(90,70,55,.11);
-
-    border-radius:50%;
-}
-
-
-.light-string{
-    position:absolute;
-
-    top:-1px;
-
-    width:1px;
+    transition:
+        transform .42s
+        cubic-bezier(.22,.8,.25,1);
 
     background:
-        rgba(90,70,55,.13);
+        linear-gradient(
+            160deg,
+            #fffaf6 0%,
+            #fff1e5 48%,
+            #fff8f3 100%
+        );
+
+    box-shadow:
+        -15px 0 45px
+        rgba(74,48,32,.08);
 }
 
 
-.light-string::after{
+.rakhi-app.page-open .rakhi-code-page{
+    transform:translateX(0);
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.code-back{
+    position:absolute;
+
+    left:17px;
+
+    top:
+        calc(
+            15px +
+            env(safe-area-inset-top)
+        );
+
+    width:41px;
+    height:41px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    z-index:20;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,255,255,.76);
+
+    border:
+        1px solid
+        rgba(90,70,55,.08);
+
+    box-shadow:
+        0 5px 18px
+        rgba(70,50,35,.05);
+
+    color:#302a27;
+
+    font-size:25px;
+
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   SECOND PAGE CONTENT
+===================================================== */
+
+.code-content{
+    width:100%;
+
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+
+    padding:
+        52px
+        20px
+        25px;
+
+    text-align:center;
+}
+
+
+.code-small-heading{
+    font-size:8px;
+
+    font-weight:600;
+
+    letter-spacing:2.2px;
+
+    color:#9b8e86;
+
+    margin-bottom:9px;
+}
+
+
+.code-title{
+    font-family:'DM Serif Display',serif;
+
+    font-size:
+        clamp(25px,7vw,31px);
+
+    line-height:1.05;
+
+    font-weight:400;
+
+    color:#292522;
+
+    max-width:300px;
+}
+
+
+.code-description{
+    margin-top:11px;
+
+    max-width:270px;
+
+    font-size:10px;
+
+    line-height:1.55;
+
+    color:#847a75;
+}
+
+
+/* =====================================================
+   GENERATED CODE
+===================================================== */
+
+.generated-code-box{
+    width:100%;
+
+    max-width:350px;
+
+    margin-top:26px;
+
+    padding:
+        21px
+        17px;
+
+    border-radius:21px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.88),
+            rgba(255,255,255,.56)
+        );
+
+    border:
+        1px solid
+        rgba(95,70,55,.08);
+
+    box-shadow:
+        0 10px 30px
+        rgba(83,58,40,.04);
+}
+
+
+.generated-code-label{
+    font-size:7px;
+
+    font-weight:600;
+
+    letter-spacing:1.8px;
+
+    color:#a09690;
+
+    margin-bottom:9px;
+}
+
+
+.generated-code{
+    font-size:
+        clamp(19px,5.5vw,23px);
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    color:#302a27;
+}
+
+
+/* =====================================================
+   COPY BUTTON
+===================================================== */
+
+.copy-code-btn{
+    width:100%;
+
+    max-width:350px;
+
+    height:48px;
+
+    margin-top:13px;
+
+    border:0;
+
+    border-radius:16px;
+
+    background:#302a27;
+
+    color:#ffffff;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+
+.copy-code-btn:active{
+    transform:scale(.985);
+}
+
+
+.copy-status{
+    height:20px;
+
+    margin-top:8px;
+
+    font-size:9px;
+
+    color:#847a75;
+}
+
+
+/* =====================================================
+   SECOND PAGE BOTTOM DESIGN
+===================================================== */
+
+.code-page-bottom{
+    width:100%;
+
+    flex:1;
+
+    min-height:70px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+.code-page-bottom::before{
     content:"";
 
     position:absolute;
 
-    left:50%;
-    bottom:-5px;
+    left:-10%;
+    bottom:-75px;
 
-    transform:translateX(-50%);
+    width:120%;
+    height:120px;
 
-    width:8px;
-    height:9px;
+    border-top:
+        1px solid
+        rgba(95,70,55,.08);
 
     border-radius:50%;
-
-    background:
-        rgba(245,202,125,.60);
-
-    box-shadow:
-        0 0 10px
-        rgba(245,202,125,.18);
-}
-
-
-.light-1{
-    left:5%;
-    height:12px;
-}
-
-.light-2{
-    left:28%;
-    height:23px;
-}
-
-.light-3{
-    left:50%;
-    height:31px;
-}
-
-.light-4{
-    left:72%;
-    height:23px;
-}
-
-.light-5{
-    left:95%;
-    height:12px;
 }
 
 
@@ -780,8 +1129,10 @@ body{
 
 @media(max-width:360px){
 
-    .rakhi-top{
+    .rakhi-top,
+    .code-rakhi-top{
         height:42vh;
+
         min-height:285px;
     }
 
@@ -816,9 +1167,8 @@ body{
     }
 
 
-    /* IMAGE */
-
-    .rakhi-images{
+    .rakhi-images,
+    .code-rakhi-images{
         bottom:52px;
 
         width:75vw;
@@ -826,16 +1176,13 @@ body{
     }
 
 
-    /* CURVE */
-
-    .rakhi-curve{
+    .rakhi-curve,
+    .code-rakhi-curve{
         bottom:-36px;
 
         height:112px;
     }
 
-
-    /* MATTER MOVED DOWN */
 
     .rakhi-content{
         padding:
@@ -845,11 +1192,16 @@ body{
     }
 
 
-    .rakhi-message{
+    .code-content{
         padding:
-            5px
-            10px
-            18px;
+            45px
+            15px
+            20px;
+    }
+
+
+    .rakhi-message{
+        padding-bottom:18px;
     }
 
 
@@ -857,13 +1209,6 @@ body{
         font-size:22px;
     }
 
-
-    .rakhi-message p{
-        font-size:8px;
-    }
-
-
-    /* CARDS */
 
     .rakhi-person-cards{
         gap:10px;
@@ -886,15 +1231,47 @@ body{
     }
 
 
-    .person-text{
-        margin-top:9px;
+    .celebration-bottom{
+        min-height:110px;
 
-        font-size:8px;
+        margin-top:6px;
     }
 
 
-    .celebration-bottom{
-        min-height:85px;
+    .bottom-lights{
+        width:44%;
+
+        top:20px;
+    }
+
+
+    .balloon-left{
+        left:-35px;
+
+        transform:scale(.90);
+    }
+
+
+    .balloon-right{
+        right:-35px;
+
+        transform:
+            scaleX(-1)
+            scale(.90);
+    }
+
+
+    .code-title{
+        font-size:24px;
+    }
+
+
+    .generated-code-box{
+        margin-top:20px;
+
+        padding:
+            18px
+            14px;
     }
 
 }
@@ -906,8 +1283,10 @@ body{
 
 @media(max-height:700px){
 
-    .rakhi-top{
+    .rakhi-top,
+    .code-rakhi-top{
         height:40vh;
+
         min-height:270px;
     }
 
@@ -917,8 +1296,8 @@ body{
     }
 
 
-    .rakhi-message{
-        padding-bottom:16px;
+    .code-content{
+        padding-top:42px;
     }
 
 
@@ -928,19 +1307,24 @@ body{
 
 
     .celebration-bottom{
-        min-height:70px;
+        min-height:90px;
+    }
+
+
+    .generated-code-box{
+        margin-top:18px;
     }
 
 }
 
 
 /* =====================================================
-   LARGE MOBILE / DESKTOP PREVIEW
+   DESKTOP PREVIEW
 ===================================================== */
 
 @media(min-width:480px){
 
-    .rakhi-section{
+    .rakhi-app{
         max-width:480px;
 
         margin:auto;
@@ -955,7 +1339,14 @@ body{
 <body>
 
 
-<section class="rakhi-section">
+<div class="rakhi-app" id="rakhiApp">
+
+
+<!-- =====================================================
+     PAGE 1 - HOME
+===================================================== -->
+
+<section class="rakhi-screen rakhi-home">
 
 
     <!-- TOP AREA -->
@@ -974,6 +1365,7 @@ body{
         </div>
 
 
+
         <!-- RIGHT HANGINGS -->
 
         <div class="rakhi-hanging right">
@@ -985,7 +1377,8 @@ body{
         </div>
 
 
-        <!-- CENTER ANIMATED IMAGE -->
+
+        <!-- HOME ANIMATED IMAGES -->
 
         <div class="rakhi-images">
 
@@ -1004,7 +1397,8 @@ body{
         </div>
 
 
-        <!-- UPWARD CURVE -->
+
+        <!-- CURVED LINE -->
 
         <div class="rakhi-curve"></div>
 
@@ -1013,27 +1407,31 @@ body{
 
 
 
-    <!-- CONTENT -->
+    <!-- HOME CONTENT -->
 
     <div class="rakhi-content">
 
 
-        <!-- RAKHI MATTER -->
+        <!-- MATTER -->
 
         <div class="rakhi-message">
+
 
             <div class="rakhi-message-small">
                 RAKSHA BANDHAN
             </div>
 
+
             <h1>
                 Celebrate the bond.
             </h1>
+
 
             <p>
                 Little fights, endless laughs
                 and a lifetime of memories.
             </p>
+
 
         </div>
 
@@ -1046,49 +1444,62 @@ body{
 
             <!-- BRO -->
 
-            <div class="rakhi-person-card">
+            <button
+                type="button"
+                class="rakhi-person-card bro-card"
+            >
 
                 <div class="person-small">
                     FOR YOUR
                 </div>
+
 
                 <div class="person-name">
                     Bro
                 </div>
 
+
                 <div class="person-text">
-                    Fights, laughs & memories
-                    that stay forever.
+                    Create something special
+                    for your sibling.
                 </div>
 
-            </div>
+            </button>
+
 
 
             <!-- SIS -->
 
-            <div class="rakhi-person-card">
+            <button
+                type="button"
+                class="rakhi-person-card sis-card"
+            >
 
                 <div class="person-small">
                     FOR YOUR
                 </div>
 
+
                 <div class="person-name">
                     Sis
                 </div>
 
+
                 <div class="person-text">
-                    A beautiful bond that
-                    always feels like home.
+                    Create something special
+                    for your sibling.
                 </div>
 
-            </div>
+            </button>
 
 
         </div>
 
 
 
-        <!-- BOTTOM DECORATIONS -->
+        <!-- =================================================
+             RESTORED BOTTOM DESIGN
+        ================================================== -->
 
         <div class="celebration-bottom">
 
@@ -1104,7 +1515,8 @@ body{
             </div>
 
 
-            <!-- CENTER BULBS -->
+
+            <!-- CENTER CURVED LIGHTS -->
 
             <div class="bottom-lights">
 
@@ -1115,6 +1527,16 @@ body{
                 <span class="light-string light-5"></span>
 
             </div>
+
+
+
+            <!-- SMALL DECORATIONS -->
+
+            <span class="bottom-dot dot-one"></span>
+            <span class="bottom-dot dot-two"></span>
+            <span class="bottom-dot dot-three"></span>
+            <span class="bottom-dot dot-four"></span>
+
 
 
             <!-- RIGHT BALLOONS -->
@@ -1138,36 +1560,472 @@ body{
 
 
 
+<!-- =====================================================
+     PAGE 2 - SLIDES RIGHT TO LEFT
+===================================================== -->
+
+<section class="rakhi-screen rakhi-code-page">
+
+
+    <!-- BACK -->
+
+    <button
+        type="button"
+        class="code-back"
+        id="codeBack"
+        aria-label="Back"
+    >
+        ‹
+    </button>
+
+
+
+    <!-- SAME TOP DESIGN -->
+
+    <div class="code-rakhi-top">
+
+
+        <!-- LEFT HANGINGS -->
+
+        <div class="rakhi-hanging left">
+
+            <span class="hanging-thread thread-one"></span>
+            <span class="hanging-thread thread-two"></span>
+            <span class="hanging-thread thread-three"></span>
+
+        </div>
+
+
+
+        <!-- RIGHT HANGINGS -->
+
+        <div class="rakhi-hanging right">
+
+            <span class="hanging-thread thread-one"></span>
+            <span class="hanging-thread thread-two"></span>
+            <span class="hanging-thread thread-three"></span>
+
+        </div>
+
+
+
+        <!-- SAME ANIMATED IMAGES -->
+
+        <div class="code-rakhi-images">
+
+            <img
+                class="code-rakhi-image-one"
+                src="image1.png"
+                alt="Rakhi"
+            >
+
+            <img
+                class="code-rakhi-image-two"
+                src="image2.png"
+                alt="Rakhi Celebration"
+            >
+
+        </div>
+
+
+
+        <!-- SAME CURVE -->
+
+        <div class="code-rakhi-curve"></div>
+
+
+    </div>
+
+
+
+    <!-- SECOND PAGE CONTENT -->
+
+    <div class="code-content">
+
+
+        <div class="code-small-heading">
+            RAKSHA BANDHAN
+        </div>
+
+
+
+        <h1
+            class="code-title"
+            id="codeTitle"
+        >
+            A little surprise for your sister.
+        </h1>
+
+
+
+        <p
+            class="code-description"
+            id="codeDescription"
+        >
+            Share this code with your sister
+            and celebrate the bond together.
+        </p>
+
+
+
+        <!-- GENERATED CODE -->
+
+        <div class="generated-code-box">
+
+
+            <div class="generated-code-label">
+                YOUR SHARING CODE
+            </div>
+
+
+            <div
+                class="generated-code"
+                id="generatedCode"
+            >
+                RAKHI-XXXXXX
+            </div>
+
+
+        </div>
+
+
+
+        <!-- COPY -->
+
+        <button
+            type="button"
+            class="copy-code-btn"
+            id="copyCodeBtn"
+        >
+            Copy Code
+        </button>
+
+
+        <div
+            class="copy-status"
+            id="copyStatus"
+        ></div>
+
+
+        <div class="code-page-bottom"></div>
+
+
+    </div>
+
+
+</section>
+
+
+</div>
+
+
+
 <script>
 
-const image1 =
+/* =====================================================
+   HOME IMAGE ANIMATION
+===================================================== */
+
+const homeImage1 =
 document.querySelector(".rakhi-image-one");
 
-const image2 =
+const homeImage2 =
 document.querySelector(".rakhi-image-two");
 
-let first = true;
+let homeFirst = true;
 
-
-/* NO TRANSITION — DIRECT IMAGE CHANGE */
 
 setInterval(() => {
 
-    if(first){
+    if(homeFirst){
 
-        image1.style.display = "none";
-        image2.style.display = "block";
+        homeImage1.style.display = "none";
+        homeImage2.style.display = "block";
 
     }else{
 
-        image1.style.display = "block";
-        image2.style.display = "none";
+        homeImage1.style.display = "block";
+        homeImage2.style.display = "none";
 
     }
 
-    first = !first;
+    homeFirst = !homeFirst;
 
 },1100);
+
+
+
+/* =====================================================
+   SECOND PAGE IMAGE ANIMATION
+===================================================== */
+
+const codeImage1 =
+document.querySelector(".code-rakhi-image-one");
+
+const codeImage2 =
+document.querySelector(".code-rakhi-image-two");
+
+let codeFirst = true;
+
+
+setInterval(() => {
+
+    if(codeFirst){
+
+        codeImage1.style.display = "none";
+        codeImage2.style.display = "block";
+
+    }else{
+
+        codeImage1.style.display = "block";
+        codeImage2.style.display = "none";
+
+    }
+
+    codeFirst = !codeFirst;
+
+},1100);
+
+
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const rakhiApp =
+document.getElementById("rakhiApp");
+
+const broCard =
+document.querySelector(".bro-card");
+
+const sisCard =
+document.querySelector(".sis-card");
+
+const codeBack =
+document.getElementById("codeBack");
+
+const codeTitle =
+document.getElementById("codeTitle");
+
+const codeDescription =
+document.getElementById("codeDescription");
+
+const generatedCode =
+document.getElementById("generatedCode");
+
+const copyCodeBtn =
+document.getElementById("copyCodeBtn");
+
+const copyStatus =
+document.getElementById("copyStatus");
+
+
+
+/* =====================================================
+   RANDOM CODE GENERATOR
+===================================================== */
+
+function generateRakhiCode(){
+
+    const characters =
+    "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+
+    let code = "";
+
+
+    for(let i = 0; i < 6; i++){
+
+        const randomIndex =
+        Math.floor(
+            Math.random() *
+            characters.length
+        );
+
+        code +=
+        characters[randomIndex];
+
+    }
+
+
+    return "RAKHI-" + code;
+
+}
+
+
+
+/* =====================================================
+   OPEN SECOND PAGE
+===================================================== */
+
+function openCodePage(type){
+
+    generatedCode.textContent =
+    generateRakhiCode();
+
+
+    copyStatus.textContent = "";
+
+
+    /* BRO CLICK */
+
+    if(type === "bro"){
+
+        codeTitle.textContent =
+        "A little surprise for your sister.";
+
+        codeDescription.textContent =
+        "Share this code with your sister and celebrate the bond you both share.";
+
+    }
+
+
+    /* SIS CLICK */
+
+    if(type === "sis"){
+
+        codeTitle.textContent =
+        "A little surprise for your brother.";
+
+        codeDescription.textContent =
+        "Share this code with your brother and celebrate the bond you both share.";
+
+    }
+
+
+    rakhiApp.classList.add(
+        "page-open"
+    );
+
+}
+
+
+
+/* =====================================================
+   BRO CARD
+===================================================== */
+
+broCard.addEventListener(
+    "click",
+    function(){
+
+        openCodePage("bro");
+
+    }
+);
+
+
+
+/* =====================================================
+   SIS CARD
+===================================================== */
+
+sisCard.addEventListener(
+    "click",
+    function(){
+
+        openCodePage("sis");
+
+    }
+);
+
+
+
+/* =====================================================
+   BACK
+===================================================== */
+
+codeBack.addEventListener(
+    "click",
+    function(){
+
+        rakhiApp.classList.remove(
+            "page-open"
+        );
+
+    }
+);
+
+
+
+/* =====================================================
+   COPY CODE
+===================================================== */
+
+copyCodeBtn.addEventListener(
+    "click",
+    async function(){
+
+        const code =
+        generatedCode.textContent;
+
+
+        try{
+
+            await navigator.clipboard.writeText(
+                code
+            );
+
+
+            copyStatus.textContent =
+            "Code copied";
+
+        }
+
+        catch(error){
+
+            const temp =
+            document.createElement(
+                "textarea"
+            );
+
+
+            temp.value = code;
+
+
+            document.body.appendChild(
+                temp
+            );
+
+
+            temp.select();
+
+
+            document.execCommand(
+                "copy"
+            );
+
+
+            temp.remove();
+
+
+            copyStatus.textContent =
+            "Code copied";
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   ESCAPE BACK
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+
+            rakhiApp.classList.remove(
+                "page-open"
+            );
+
+        }
+
+    }
+);
 
 </script>
 
