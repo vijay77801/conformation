@@ -146,7 +146,6 @@ button{
     transform:scaleX(-1);
 }
 
-
 .hanging-thread{
     position:absolute;
 
@@ -172,7 +171,6 @@ button{
     height:27px;
 }
 
-
 .hanging-thread::after{
     content:"";
 
@@ -188,16 +186,13 @@ button{
         translateX(-50%)
         rotate(45deg);
 
-    border:
-        1px solid
-        rgba(80,60,50,.18);
+    border:1px solid rgba(80,60,50,.18);
 
     background:
         rgba(255,255,255,.82);
 
     border-radius:4px;
 }
-
 
 .hanging-thread::before{
     content:"";
@@ -238,7 +233,6 @@ button{
     z-index:5;
 }
 
-
 .rakhi-images img,
 .code-rakhi-images img{
     position:absolute;
@@ -255,7 +249,6 @@ button{
     transition:none !important;
     animation:none !important;
 }
-
 
 .rakhi-image-two,
 .code-rakhi-image-two{
@@ -288,7 +281,6 @@ button{
 
     pointer-events:none;
 }
-
 
 .rakhi-curve::after,
 .code-rakhi-curve::after{
@@ -345,7 +337,6 @@ button{
         22px;
 }
 
-
 .rakhi-message-small{
     font-size:8px;
 
@@ -357,7 +348,6 @@ button{
 
     margin-bottom:8px;
 }
-
 
 .rakhi-message h1{
     font-family:'DM Serif Display',serif;
@@ -371,7 +361,6 @@ button{
 
     color:#292522;
 }
-
 
 .rakhi-message p{
     margin:10px auto 0;
@@ -405,18 +394,13 @@ button{
     z-index:5;
 }
 
-
-/* CLEAN CARD */
-
 .rakhi-person-card{
     width:100%;
     height:155px;
 
     position:relative;
 
-    padding:
-        19px
-        16px;
+    padding:19px 16px;
 
     overflow:hidden;
 
@@ -442,20 +426,15 @@ button{
     -webkit-tap-highlight-color:transparent;
 }
 
-
-/* REMOVE CIRCLE + COLORED SHAPE */
-
 .rakhi-person-card::before,
 .rakhi-person-card::after{
     content:none !important;
     display:none !important;
 }
 
-
 .rakhi-person-card:active{
     transform:scale(.98);
 }
-
 
 .person-small{
     position:relative;
@@ -473,15 +452,12 @@ button{
     margin-bottom:9px;
 }
 
-
 .person-name{
     position:relative;
 
     z-index:2;
 
-    font-family:
-        'DM Serif Display',
-        serif;
+    font-family:'DM Serif Display',serif;
 
     font-size:31px;
 
@@ -491,7 +467,6 @@ button{
 
     color:#292624;
 }
-
 
 .person-text{
     position:relative;
@@ -511,10 +486,12 @@ button{
 
 
 /* =====================================================
-   BOTTOM DECORATION
+   SHARED BOTTOM DECORATION
+   USED ON HOME + SECOND PAGE
 ===================================================== */
 
-.celebration-bottom{
+.celebration-bottom,
+.code-page-bottom{
     width:100%;
 
     flex:1;
@@ -553,7 +530,6 @@ button{
     z-index:3;
 }
 
-
 .light-string{
     position:absolute;
 
@@ -564,7 +540,6 @@ button{
     background:
         rgba(95,75,60,.15);
 }
-
 
 .light-string::after{
     content:"";
@@ -593,7 +568,6 @@ button{
         0 0 9px
         rgba(244,199,124,.20);
 }
-
 
 .light-1{
     left:4%;
@@ -636,7 +610,6 @@ button{
     z-index:2;
 }
 
-
 .dot-one{
     width:5px;
     height:5px;
@@ -644,7 +617,6 @@ button{
     left:31%;
     top:75px;
 }
-
 
 .dot-two{
     width:3px;
@@ -657,7 +629,6 @@ button{
         rgba(218,181,120,.28);
 }
 
-
 .dot-three{
     width:4px;
     height:4px;
@@ -665,7 +636,6 @@ button{
     right:36%;
     top:87px;
 }
-
 
 .dot-four{
     width:3px;
@@ -694,18 +664,15 @@ button{
     z-index:1;
 }
 
-
 .balloon-left{
     left:-28px;
 }
-
 
 .balloon-right{
     right:-28px;
 
     transform:scaleX(-1);
 }
-
 
 .balloon{
     position:absolute;
@@ -718,7 +685,6 @@ button{
         1px solid
         rgba(90,65,50,.07);
 }
-
 
 .balloon::after{
     content:"";
@@ -734,7 +700,6 @@ button{
     background:
         rgba(90,70,60,.11);
 }
-
 
 .balloon::before{
     content:"";
@@ -754,7 +719,6 @@ button{
     background:inherit;
 }
 
-
 .balloon-one,
 .balloon-four{
     width:43px;
@@ -769,7 +733,6 @@ button{
     transform:rotate(-8deg);
 }
 
-
 .balloon-two,
 .balloon-five{
     width:38px;
@@ -783,7 +746,6 @@ button{
 
     transform:rotate(5deg);
 }
-
 
 .balloon-three,
 .balloon-six{
@@ -829,9 +791,7 @@ button{
         rgba(74,48,32,.08);
 }
 
-
-.rakhi-app.page-open
-.rakhi-code-page{
+.rakhi-app.page-open .rakhi-code-page{
     transform:translateX(0);
 }
 
@@ -903,11 +863,10 @@ button{
     padding:
         52px
         20px
-        25px;
+        0;
 
     text-align:center;
 }
-
 
 .code-small-heading{
     font-size:8px;
@@ -921,11 +880,8 @@ button{
     margin-bottom:9px;
 }
 
-
 .code-title{
-    font-family:
-        'DM Serif Display',
-        serif;
+    font-family:'DM Serif Display',serif;
 
     font-size:
         clamp(25px,7vw,31px);
@@ -938,7 +894,6 @@ button{
 
     max-width:300px;
 }
-
 
 .code-description{
     margin-top:11px;
@@ -982,7 +937,6 @@ button{
         rgba(83,58,40,.04);
 }
 
-
 .generated-code-label{
     font-size:7px;
 
@@ -994,7 +948,6 @@ button{
 
     margin-bottom:9px;
 }
-
 
 .generated-code{
     font-size:
@@ -1009,40 +962,55 @@ button{
 
 
 /* =====================================================
-   COPY BUTTON
+   COPY CODE BUTTON
 ===================================================== */
 
 .copy-code-btn{
     width:100%;
-
     max-width:350px;
-
     height:48px;
 
     margin-top:13px;
 
-    border:0;
+    border:
+        1px solid
+        rgba(174,105,73,.12);
 
     border-radius:16px;
 
-    background:#302a27;
+    background:
+        linear-gradient(
+            135deg,
+            #d98f6f 0%,
+            #c97959 100%
+        );
 
     color:#ffffff;
 
     font-size:11px;
-
     font-weight:600;
+
+    letter-spacing:.3px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(183,111,79,.16);
 
     cursor:pointer;
 
     -webkit-tap-highlight-color:transparent;
 }
 
-
 .copy-code-btn:active{
     transform:scale(.985);
-}
 
+    background:
+        linear-gradient(
+            135deg,
+            #cf8465,
+            #bd704f
+        );
+}
 
 .copy-status{
     height:20px;
@@ -1052,42 +1020,6 @@ button{
     font-size:9px;
 
     color:#847a75;
-}
-
-
-/* =====================================================
-   SECOND PAGE BOTTOM
-===================================================== */
-
-.code-page-bottom{
-    width:100%;
-
-    flex:1;
-
-    min-height:70px;
-
-    position:relative;
-
-    overflow:hidden;
-}
-
-
-.code-page-bottom::before{
-    content:"";
-
-    position:absolute;
-
-    left:-10%;
-    bottom:-75px;
-
-    width:120%;
-    height:120px;
-
-    border-top:
-        1px solid
-        rgba(95,70,55,.08);
-
-    border-radius:50%;
 }
 
 
@@ -1103,36 +1035,30 @@ button{
         min-height:285px;
     }
 
-
     .rakhi-hanging{
         width:68px;
         height:80px;
     }
-
 
     .thread-one{
         left:8px;
         height:29px;
     }
 
-
     .thread-two{
         left:32px;
         height:47px;
     }
-
 
     .thread-three{
         left:58px;
         height:23px;
     }
 
-
     .hanging-thread::after{
         width:13px;
         height:13px;
     }
-
 
     .rakhi-images,
     .code-rakhi-images{
@@ -1142,14 +1068,12 @@ button{
         height:70%;
     }
 
-
     .rakhi-curve,
     .code-rakhi-curve{
         bottom:-36px;
 
         height:112px;
     }
-
 
     .rakhi-content{
         padding:
@@ -1158,29 +1082,24 @@ button{
             0;
     }
 
-
     .code-content{
         padding:
             45px
             15px
-            20px;
+            0;
     }
-
 
     .rakhi-message{
         padding-bottom:18px;
     }
 
-
     .rakhi-message h1{
         font-size:22px;
     }
 
-
     .rakhi-person-cards{
         gap:10px;
     }
-
 
     .rakhi-person-card{
         height:140px;
@@ -1192,18 +1111,16 @@ button{
         border-radius:19px;
     }
 
-
     .person-name{
         font-size:28px;
     }
 
-
-    .celebration-bottom{
+    .celebration-bottom,
+    .code-page-bottom{
         min-height:110px;
 
         margin-top:6px;
     }
-
 
     .bottom-lights{
         width:44%;
@@ -1211,13 +1128,11 @@ button{
         top:20px;
     }
 
-
     .balloon-left{
         left:-35px;
 
         transform:scale(.90);
     }
-
 
     .balloon-right{
         right:-35px;
@@ -1227,11 +1142,9 @@ button{
             scale(.90);
     }
 
-
     .code-title{
         font-size:24px;
     }
-
 
     .generated-code-box{
         margin-top:20px;
@@ -1256,26 +1169,22 @@ button{
         min-height:270px;
     }
 
-
     .rakhi-content{
         padding-top:42px;
     }
-
 
     .code-content{
         padding-top:42px;
     }
 
-
     .rakhi-person-card{
         height:132px;
     }
 
-
-    .celebration-bottom{
+    .celebration-bottom,
+    .code-page-bottom{
         min-height:90px;
     }
-
 
     .generated-code-box{
         margin-top:18px;
@@ -1299,7 +1208,6 @@ button{
 </style>
 </head>
 
-
 <body>
 
 
@@ -1307,7 +1215,7 @@ button{
 
 
 <!-- =====================================================
-     PAGE 1 - HOME
+     HOME PAGE
 ===================================================== -->
 
 <section class="rakhi-screen rakhi-home">
@@ -1366,12 +1274,10 @@ button{
 
 
 
-    <!-- CONTENT -->
+    <!-- HOME CONTENT -->
 
     <div class="rakhi-content">
 
-
-        <!-- MESSAGE -->
 
         <div class="rakhi-message">
 
@@ -1392,14 +1298,10 @@ button{
 
 
 
-        <!-- =================================================
-             CLEAN BRO + SIS CARDS
-        ================================================== -->
+        <!-- BRO + SIS CARDS -->
 
         <div class="rakhi-person-cards">
 
-
-            <!-- BRO -->
 
             <button
                 type="button"
@@ -1422,8 +1324,6 @@ button{
             </button>
 
 
-
-            <!-- SIS -->
 
             <button
                 type="button"
@@ -1450,9 +1350,7 @@ button{
 
 
 
-        <!-- =================================================
-             BOTTOM DECORATIONS
-        ================================================== -->
+        <!-- HOME BOTTOM DESIGN -->
 
         <div class="celebration-bottom">
 
@@ -1468,7 +1366,6 @@ button{
             </div>
 
 
-
             <!-- CENTER LIGHTS -->
 
             <div class="bottom-lights">
@@ -1482,14 +1379,12 @@ button{
             </div>
 
 
-
-            <!-- SMALL DECORATIONS -->
+            <!-- DOTS -->
 
             <span class="bottom-dot dot-one"></span>
             <span class="bottom-dot dot-two"></span>
             <span class="bottom-dot dot-three"></span>
             <span class="bottom-dot dot-four"></span>
-
 
 
             <!-- RIGHT BALLOONS -->
@@ -1514,7 +1409,7 @@ button{
 
 
 <!-- =====================================================
-     PAGE 2
+     SECOND PAGE
 ===================================================== -->
 
 <section class="rakhi-screen rakhi-code-page">
@@ -1533,8 +1428,6 @@ button{
 
 
 
-    <!-- SAME TOP DESIGN -->
-
     <div class="code-rakhi-top">
 
 
@@ -1549,7 +1442,6 @@ button{
         </div>
 
 
-
         <!-- RIGHT HANGINGS -->
 
         <div class="rakhi-hanging right">
@@ -1559,7 +1451,6 @@ button{
             <span class="hanging-thread thread-three"></span>
 
         </div>
-
 
 
         <!-- SECOND PAGE ANIMATED IMAGES -->
@@ -1579,7 +1470,6 @@ button{
             >
 
         </div>
-
 
 
         <!-- CURVE -->
@@ -1619,7 +1509,7 @@ button{
 
 
 
-        <!-- CODE -->
+        <!-- GENERATED CODE -->
 
         <div class="generated-code-box">
 
@@ -1655,7 +1545,58 @@ button{
         ></div>
 
 
-        <div class="code-page-bottom"></div>
+
+        <!-- =================================================
+             SAME BALLOONS + LIGHTS AS HOME
+        ================================================== -->
+
+        <div class="code-page-bottom">
+
+
+            <!-- LEFT BALLOONS -->
+
+            <div class="balloon-group balloon-left">
+
+                <span class="balloon balloon-one"></span>
+                <span class="balloon balloon-two"></span>
+                <span class="balloon balloon-three"></span>
+
+            </div>
+
+
+            <!-- CENTER LIGHTS -->
+
+            <div class="bottom-lights">
+
+                <span class="light-string light-1"></span>
+                <span class="light-string light-2"></span>
+                <span class="light-string light-3"></span>
+                <span class="light-string light-4"></span>
+                <span class="light-string light-5"></span>
+
+            </div>
+
+
+            <!-- DOTS -->
+
+            <span class="bottom-dot dot-one"></span>
+            <span class="bottom-dot dot-two"></span>
+            <span class="bottom-dot dot-three"></span>
+            <span class="bottom-dot dot-four"></span>
+
+
+            <!-- RIGHT BALLOONS -->
+
+            <div class="balloon-group balloon-right">
+
+                <span class="balloon balloon-four"></span>
+                <span class="balloon balloon-five"></span>
+                <span class="balloon balloon-six"></span>
+
+            </div>
+
+
+        </div>
 
 
     </div>
@@ -1770,12 +1711,10 @@ document.getElementById("copyStatus");
 
 
 /* =====================================================
-   ONE DEVICE / BROWSER = ONE CODE
+   ONE BROWSER / DEVICE STORAGE = ONE CODE
 ===================================================== */
 
 function getDeviceRakhiCode(){
-
-    /* CHECK EXISTING CODE */
 
     const savedCode =
     localStorage.getItem(
@@ -1783,19 +1722,12 @@ function getDeviceRakhiCode(){
     );
 
 
-    /* SAME CODE ALREADY EXISTS */
-
     if(savedCode){
 
         return savedCode;
 
     }
 
-
-
-    /* =================================================
-       FIRST TIME ONLY
-    ================================================= */
 
     const characters =
     "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
@@ -1817,15 +1749,9 @@ function getDeviceRakhiCode(){
     }
 
 
-
-    /* CREATE NEW CODE */
-
     const newCode =
     "RAKHI-" + randomPart;
 
-
-
-    /* SAVE ON THIS BROWSER / DEVICE */
 
     localStorage.setItem(
         "cezooRakhiDeviceCode",
@@ -1838,10 +1764,7 @@ function getDeviceRakhiCode(){
 }
 
 
-
-/* =====================================================
-   GET CODE ONLY ONCE
-===================================================== */
+/* GET DEVICE CODE ONCE */
 
 const deviceRakhiCode =
 getDeviceRakhiCode();
@@ -1854,9 +1777,6 @@ getDeviceRakhiCode();
 
 function openCodePage(type){
 
-
-    /* SAME CODE EVERY TIME */
-
     generatedCode.textContent =
     deviceRakhiCode;
 
@@ -1864,17 +1784,12 @@ function openCodePage(type){
     copyStatus.textContent = "";
 
 
-
-    /* =================================================
-       BRO CLICK
-       SHARE WITH SISTER
-    ================================================= */
+    /* BRO CLICK */
 
     if(type === "bro"){
 
         codeTitle.textContent =
         "A little surprise for your sister.";
-
 
         codeDescription.textContent =
         "Share this code with your sister and celebrate the bond you both share.";
@@ -1882,26 +1797,18 @@ function openCodePage(type){
     }
 
 
-
-    /* =================================================
-       SIS CLICK
-       SHARE WITH BROTHER
-    ================================================= */
+    /* SIS CLICK */
 
     if(type === "sis"){
 
         codeTitle.textContent =
         "A little surprise for your brother.";
 
-
         codeDescription.textContent =
         "Share this code with your brother and celebrate the bond you both share.";
 
     }
 
-
-
-    /* OPEN SECOND PAGE */
 
     rakhiApp.classList.add(
         "page-open"
@@ -1911,9 +1818,7 @@ function openCodePage(type){
 
 
 
-/* =====================================================
-   BRO
-===================================================== */
+/* BRO */
 
 broCard.addEventListener(
     "click",
@@ -1926,9 +1831,7 @@ broCard.addEventListener(
 
 
 
-/* =====================================================
-   SIS
-===================================================== */
+/* SIS */
 
 sisCard.addEventListener(
     "click",
@@ -1941,9 +1844,7 @@ sisCard.addEventListener(
 
 
 
-/* =====================================================
-   BACK
-===================================================== */
+/* BACK */
 
 codeBack.addEventListener(
     "click",
@@ -2028,9 +1929,7 @@ copyCodeBtn.addEventListener(
 
 
 
-/* =====================================================
-   ESCAPE = BACK
-===================================================== */
+/* ESCAPE = BACK */
 
 document.addEventListener(
     "keydown",
